@@ -29,6 +29,7 @@ export default function MovieDetailsPage() {
   if (!movie) return <ErrorComponent message="NO Info"/>
 
   return (
+    
     <div className="movie-details">
 
       <div className="back-button">
@@ -38,8 +39,8 @@ export default function MovieDetailsPage() {
         </button>
       </div>
 
-      <div className="movie-header">
-        <img src={movie.Poster} alt={movie.Title} className="movie-poster" />
+      <div className="movie-poster">
+        <img src={movie.Poster} alt={movie.Title}/>
       </div>
 
       <div className="gridinfo">
@@ -121,9 +122,7 @@ export default function MovieDetailsPage() {
           country={movie.Country}
           production={movie.Production}
         />
-
       </div>
-
     </div>
   );
 }
