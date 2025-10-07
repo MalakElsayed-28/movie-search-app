@@ -24,17 +24,14 @@ body, html {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-   background-color: #21e784;
-   width: 100%;
+  width: 100%;
 }
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; /* will make movie card 1 per row/* */
   gap: 25px;
   min-width: 100%;
-  background-color: blue;
 }
 
 .GridContainer {
@@ -97,9 +94,6 @@ img {
   color: white;
   font-size: 15px;
 }
-/* .searchIcon{
-  align-self: flex-end;
-} */
 
 .startSearch {
   display: flex;
@@ -157,18 +151,15 @@ img {
   width: 100%;
   margin: 0 ; 
   padding: 0;
-  background-color: #daf52a;
   height: auto;
 }
 .gridinfo {
   display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr; */
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 15px;
   width: 100%;
   margin: 0; 
   padding: 0;
-  background-color: aqua;
 }
 .item {
   background: #1a1a1a;
@@ -181,9 +172,8 @@ img {
   flex-direction: column;
   justify-content: center; 
   font-size: 20px ;
-  /* align-items: center; */
   gap:5px;
-  box-sizing: border-box; /* ✅ ensures padding doesn’t break layout */
+  box-sizing: border-box; 
   margin: 0;
 }
 .movie-poster img {
@@ -206,28 +196,16 @@ img {
   flex-direction: row;
   gap: 20px;
 }
-/* .c {
-  display: flex;
-  flex-direction: column;
-    justify-content: center; 
-    font-size: 20px ;
-    align-items: center;
-    gap:5px;
-} */
-.item > div {
-  display: flex;           /* ✅ makes icon + text inline */
-  /* align-items: center; */
-  justify-content: center;
-  gap: 5px;                /* space between icon and number */
-  font-size: 20px;
-  font-weight: bold;
-}
 
-/* .back-button {
-  grid-column: span 2;
-  text-align: left;
-  align-self: start;
-} */
+.item > div {
+  display: flex;        
+  justify-content: center;
+  gap: 5px;                
+  font-size: 20px;
+}
+.item > div >h3 {
+font-weight: bold;
+}
 .back-button button {
   border: none;
   outline: none;
@@ -268,7 +246,7 @@ img {
 .centerIcons{ 
   display: flex;
   align-items: center;
-  gap:5px;
+  gap:10px;
 }
 
 @media (max-width: 571px) {
@@ -276,15 +254,15 @@ img {
     grid-template-columns: 1fr;     
     text-align: center;
     grid-auto-rows: min-content; 
-    justify-items: center;     /* ✅ stretch instead of center */
-    width: 100%;                /* ✅ ensures full width */
+    justify-items: center;     
+    width: 100%;                
     box-sizing: border-box;
   }
   .searchBox {
-    width: 80%;       /* full width */
-    padding-right: 20px;     /* less padding */
-    height: auto;      /* allow flexible height */
-    flex-wrap: nowrap; /* keep input + icon inline */
+    width: 80%;     
+    padding-right: 20px;    
+    height: auto;      
+    flex-wrap: nowrap; 
     height: 15px;
   }
   .movie-poster img {
@@ -294,12 +272,10 @@ img {
     margin: 0 auto;
   }
    #root {
-    padding: 1rem; /* reduce padding on small screens */
+    padding: 1rem; 
   }
 
-  /* .headerDetails {
-    text-align: center;
-  } */
+  
 
   .gridinfo {
     grid-template-columns: 1fr 1fr 1fr;
@@ -316,7 +292,7 @@ img {
   }
   .item > div {
   justify-content: center;
-  gap: 2px;                /* space between icon and number */
+  gap: 2px;               
   font-size: 10px;
   font-weight: bold;
 }
@@ -330,21 +306,9 @@ img {
     margin: 0 auto;
   }
   .Griditem {
-    width: 100%;       /* responsive card width */
-    max-width: 300px;  /* prevent too large */
+    width: 100%;      
+    max-width: 300px;  
   }
   
 }
 
-* {
-  outline: 1px solid red; 
-}
-
-
-.movie-details { outline: 2px solid red; }
-.back-button { outline: 2px solid blue; }
-.gridinfo { outline: 2px solid green; }
-.movie-poster { outline: 2px solid orange; }
-.headerDetails { outline: 2px solid purple; }
-.searchBox{ outline: 2px solid rgb(79, 227, 238);}
-.item{outline: 2px solid rgb(238, 79, 158);}
