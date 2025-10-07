@@ -7,9 +7,9 @@ interface InfoProps {
 
 export default function AdditionalInformation({released, country, language, production}:InfoProps){
     return(
-        <div className="item" style={{ gridColumn: "span 3" }}>
+        <div className="item span-3">
           <h3>Additional Information</h3>
-          <div style={{ display: "flex", gap: "200px" }}>
+          <div id="moreInfo">
             <div>
               <p>Released: {released}</p>
               <p>Language: {language}</p>

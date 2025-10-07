@@ -44,7 +44,7 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <SearchInput query={query} setQuery={(val: string) => setSearchParams({ q: val })} onSearch={() => searchMovies(query)} />  
+      <SearchInput query={query} setQuery={(val: string) => setSearchParams({ q: val })}  />  
       {!query ? (
         <StartSearch />
       ) : error ? (

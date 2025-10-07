@@ -30,9 +30,9 @@ export default function MovieDetailsPage() {
 
   return (
     
-    <div className="movie-details">
+    <div className="movie-details span-3">
 
-      <div className="back-button">
+      <div className="back-button span-2">
         <button onClick={() => navigate(-1)}>
           <MoveLeft size={30} strokeWidth={2} />
           Back to Search
@@ -45,7 +45,7 @@ export default function MovieDetailsPage() {
 
       <div className="gridinfo">
 
-        <div className="headerDetails">
+        <div className="headerDetails span-3">
 
           <h1 style={{ color: "#a42af5" }}>
             {movie.Title}
@@ -56,7 +56,7 @@ export default function MovieDetailsPage() {
             <Clock4 /> {movie.Runtime}
           </div>
 
-          <div>
+          <div >
             {movie.Genre.split(",").map((g: string) => (
               <span className="genre" key={g}>
                 {g}
@@ -66,30 +66,30 @@ export default function MovieDetailsPage() {
 
         </div>
 
-        <div className="item c">
-          <div>
+        <div className="item span-1">
+          <div className="centerIcons">
             <Star color="gold" /> {movie.imdbRating}
           </div>
-          <p>IMDb Rating</p>
+          <div>IMDb Rating</div>
         </div>
 
-        <div className="item c" >
+        <div className="item  span-1" >
           <div style={{ color: "#a42af5" }}>
             {movie.Metascore}
           </div>
-          <p>Metascore</p>
+          <div>Metascore</div>
         </div>
 
-        <div className="item c">
-          <div >
+        <div className="item span-1">
+          <div className="centerIcons">
             <DollarSign color="gold" />
             {movie.BoxOffice.slice(1)}
           </div>
-          <p>Box Office </p>
+          <div>Box Office </div>
         </div>
 
         <div className="item span-3">
-          <h3 style={{ display: "flex", gap: "10px", fontSize:"20px" }}><Film size={30} color= "#a42af5"/>Plot</h3>
+          <h3  className="centerIcons"><Film color= "#a42af5"/>Plot</h3>
           <p>{movie.Plot}</p>
         </div>
 
@@ -109,8 +109,8 @@ export default function MovieDetailsPage() {
         </div>
 
         <div className="item span-3" >
-          <h3 style={{ display: "flex", gap: "10px" }}>
-            <Award size={30} color="gold" />
+          <h3  className="centerIcons">
+            <Award  color="gold" />
             Awards
           </h3>
           <p>{movie.Awards}</p>

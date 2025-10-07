@@ -10,11 +10,11 @@ export default function MovieCard({ imdbID, title, year, poster }: MovieCardProp
 
   return (
     <div className="Griditem" key={imdbID}>
-  <Link to={`/movie/${imdbID}`}  style={{ textDecoration: "none" }}>
+      <Link to={`/movie/${imdbID}`} style={{ textDecoration: "none" }}>
         <img src={poster} alt={title} />
-        <p style={{color:"white"}}><strong>{title}</strong> <br />({year})</p>
-  </Link>
-  </div>
+        <p style={{ color: "white" }}><strong>{title}</strong> <br />({year})</p>
+      </Link>
+    </div>
   );
 }
 
